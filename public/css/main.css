@@ -1,0 +1,27 @@
+@import url('form.css');
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.img__logo {
+    width: 60px;
+    height: 60px;
+}
+
+.img__logo--md {
+    width: 100px;
+    height: 100px;
+}
+
+.carousel-item .img__carousel {
+    opacity: 0.85;
+}
+
+/** Footer, configuración para que esté abajo siempre */
