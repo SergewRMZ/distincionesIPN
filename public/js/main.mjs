@@ -23,25 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
     else {
       alert('CURP válida');
       try {
-          const response = await fetch('./app/controllers/session.php', {
+          const response = await fetch('http://localhost/PHP/distincionesipn/user/login', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ curp: CURP }),
+          body: data
         });
 
         if (response.ok) {
-          const responseData = await response.json();
-          console.log(responseData);
-        }
+          const result = await response.json();
 
-        else {
-          console.error('Error en la respuesta del servidor:', response.statusText);
-          const errorResponse = await response.text();
-          console.error('Contenido de la respuesta:', errorResponse);
-        }
+          if (result.success) {
+            showWelcome (result.userData);
+          }
 
+          else {
+            alert('Usuario no encontrado');
+          }
+        }
       } 
       
       catch (error) {
@@ -52,3 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
+/** Vista dinámica de usuario */
+
+const showWelcome = (data) => {
+  console.log(data);
+}

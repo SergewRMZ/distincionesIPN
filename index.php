@@ -1,7 +1,9 @@
-<?php include('./app/views/templates/header.php'); 
-  include('./lib/routes.php');
-  include('./lib/Router.php');
-
+<?php 
+  use lib\Router;
+  include('./app/views/templates/header.php'); 
+  include_once('./lib/routes.php');
+  include_once('./autoloader.php');
+  
   /** Router */
   $router = new Router();
   $router->run();

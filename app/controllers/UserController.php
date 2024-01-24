@@ -1,5 +1,10 @@
 <?php
-  include_once('./app/models/UserModel.php');
+
+  namespace app\controllers;
+  use app\models\UserModel;
+  
+  error_reporting(E_ALL); 
+  ini_set('display_errors', '1');
 
   class UserController {
     private $userModel;
@@ -9,22 +14,36 @@
     }
 
     public function home () {
-      require_once('./app/views/login.php');
+      if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        require_once('./app/views/login.php');
+      }
     }
 
-    public function login ($curp) {
-      $user = $this->userModel->checkUserByCurp($curp);
+    public function login () {
+      if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $curp = $_POST['curp'];
 
-      if ($user) {
-        session_start();
-        $_SESSION['user_id'] = $user['id'];
+        if (!empty($curp)) {
+          
+          $userData = $this->userModel->checkUserByCurp($curp);
+          $success = false;
 
-        header('Location: ./app/views/user.php');
-        exit;
-      } 
+          if ($userData != null) {
+            $success = true;
+          }
 
-      else {
-        echo 'Usuario no encontrado';
+          $response = array(
+            'success' => $success,
+            'userData' => $userData
+          );
+
+          header('Content-Type: application/json');
+          ob_clean();
+          echo json_encode($response);
+          exit;
+        }
       }
+
+      $this->home();
     }
   }

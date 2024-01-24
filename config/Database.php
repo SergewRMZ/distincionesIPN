@@ -1,4 +1,7 @@
 <?php
+
+  namespace config;
+  use PDO;
   class Database {
     private static $instance = null;
     private $host = "localhost";
@@ -17,7 +20,7 @@
         ];
 
         $this->conection = new PDO($dsn, $this->user, $this->pass, $opciones);
-        echo "Conectado a la base de datos";
+        // echo "Conectado a la base de datos";
       }
 
       catch (PDOException $e) {

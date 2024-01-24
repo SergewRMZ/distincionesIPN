@@ -1,5 +1,5 @@
 <div class="container mb-4 mt-4">
-  <form method="post" id="loginForm" class="w-75"  style="margin: 0 auto">
+  <form action="user/login" method="post" id="loginForm" class="w-75"  style="margin: 0 auto">
     <div class="card">
       <div class="card-header text-center fw-bold text-uppercase">
         Iniciar Sesión

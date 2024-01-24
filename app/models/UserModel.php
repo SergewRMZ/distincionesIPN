@@ -1,5 +1,8 @@
 <?php
-  include_once('./config/Database.php');
+  namespace app\models;
+  use config\Database;
+  use PDO;
+  
   class UserModel {
     private $db;
 
@@ -14,11 +17,11 @@
         $consulta->bindParam(':curp', $curp, PDO::PARAM_STR);
         $consulta->execute();
 
-        return $consulta->fetch(PDO::FETCH_ASSOC);
+        return $consulta->fetch(PDO::FETCH_ASSOC) ? : null;
       }
 
       catch (PDOException $e) {
-        echo "Error en la base de datos: " . $e->getMessage();
+        // echo "Error en la base de datos: " . $e->getMessage();
         return false;
       }
     }

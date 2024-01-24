@@ -1,1 +1,1 @@
-<h1>Te invitamos a la ceremonia perro</h1>
+<h1>¡Bienvenido perro! Presiona el siguiente botón para confirmar tu asistencia</h1>
