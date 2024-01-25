@@ -15,6 +15,10 @@ a {
     height: 60px;
 }
 
+h2 {
+    color:cadetblue;
+}
+
 .img__logo--md {
     width: 100px;
     height: 100px;

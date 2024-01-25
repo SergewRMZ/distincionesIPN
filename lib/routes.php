@@ -7,6 +7,6 @@
     // echo $urlPath . ' <br>';
     // echo $url . '<br>';
 
-    
+    define ('URL_BASE', $folderPath);
     define ('URL', $url);
 ?>

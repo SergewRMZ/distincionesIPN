@@ -1,1 +1,0 @@
-<h1>¡Bienvenido perro! Presiona el siguiente botón para confirmar tu asistencia</h1>

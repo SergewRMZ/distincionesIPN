@@ -5,7 +5,7 @@
     $folderPath = __DIR__ . DIRECTORY_SEPARATOR . $classFile;
     if (file_exists($folderPath)) {
       require_once $folderPath;
-      echo '<br>Archivo ' . $folderPath . ' cargado<br>';
+      // echo '<br>Archivo ' . $folderPath . ' cargado<br>';
     }
 
     else {

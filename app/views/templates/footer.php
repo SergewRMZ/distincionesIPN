@@ -3,7 +3,7 @@
                 <div class="row">
                     <div class="col d-flex align-items-center fw-bold justify-content-center">
                         <a href="index">
-                            <img class="img__logo--md" src="./public/img/logo_IPN.png" alt="logo_IPN"/>
+                            <img class="img__logo--md" src="<?php echo URL_BASE?>/public/img/logo_IPN.png" alt="logo_IPN"/>
                         </a>
                         <p class="text-white text-uppercase">Instituto Politécnico Nacional</p>
                     </div>

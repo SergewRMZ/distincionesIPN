@@ -4,10 +4,14 @@
 
   class AdminController {
     public function home () {
-      echo 'Estoy en Home del Administrador';
+      ?>
+      <h2>Estoy en el Administrador</h2>
+      <?php
     }
 
     public function create () {
-      echo 'Estoy en crear usuario';
+      ?>
+      <h2>Estoy en crear usuario</h2>
+      <?php
     }
   }

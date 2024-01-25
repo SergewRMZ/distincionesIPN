@@ -1,7 +1,7 @@
 <?php 
   use lib\Router;
-  include('./app/views/templates/header.php'); 
   include_once('./lib/routes.php');
+  include('./app/views/templates/header.php'); 
   include_once('./autoloader.php');
   
   /** Router */
