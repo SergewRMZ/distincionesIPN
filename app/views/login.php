@@ -30,5 +30,5 @@
 </div>
     
 <!-- Archivos de JavaScript -->
-<script type="module" src="./public/js/formValidator.mjs"></script>
+
 <script type="module" src="./public/js/main.mjs"></script>

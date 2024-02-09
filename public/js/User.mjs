@@ -68,6 +68,14 @@ const User = (() => {
                 <br>Agradecemos tu contribución y esperamos que disfrutes de la experiencia.
               </p>
 
+              <div class="info-event text-start">
+                <h2 class="text-uppercase">Información del Evento</h2>
+                <ul>
+                  <li><span>Lugar:</span> ${user_data.place}</li>
+                  <li><span>Fecha:</span> ${user_data.date}</li>
+                  <li><span>Hora:</span> ${user_data.hour}</li>
+                </ul>
+              </div>
               <div class="mb-3 d-flex justify-content-center">
                 <button type="submit" class="btn btn-primary w-50 me-4">Aceptar</button> 
                 <button type="submit" class="btn btn-danger w-50">Rechazar</button>       
@@ -75,7 +83,6 @@ const User = (() => {
             </div>
           </div>
         </div>
-
         <div class="card-footer text-muted">
           ¡Disfruta de tu experiencia!
         </div>

@@ -13,7 +13,7 @@
   <body>
     <nav class="shadow-sm navbar navbar-expand-lg" style="background-color: #D20073">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index">
+        <a class="navbar-brand" href="<?php echo URL_BASE?>">
             <img class="img__logo" src="<?php echo URL_BASE?>/public/img/logo_IPN.png" alt="logo_IPN"/>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

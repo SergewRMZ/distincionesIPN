@@ -1,5 +1,11 @@
 @import url('form.css');
 
+/** Definición de Color **/
+:root {
+    --color-principal: #D20073;
+    --color-principal__darken: #A7005B;
+}
+
 body {
     background-color: white;
     margin: 0;
@@ -10,13 +16,18 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none; /* Puedes cambiarlo a 'circle', 'disc', etc. */
+}
+
 .img__logo {
     width: 60px;
     height: 60px;
 }
 
 h2 {
-    color:cadetblue;
+    color: var(--color-principal__darken);
+    font-size: 20px;
 }
 
 .img__logo--md {

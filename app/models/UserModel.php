@@ -12,7 +12,8 @@
 
     public function checkUserByCurp ($curp) {
       try {
-        $query = "SELECT * FROM galardonado WHERE curp=:curp";
+        $query = "SELECT * FROM galardonado JOIN event 
+        ON galardonado.id_event = event.id WHERE curp=:curp";
         $consulta = $this->db->prepare($query);
         $consulta->bindParam(':curp', $curp, PDO::PARAM_STR);
         $consulta->execute();
